@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Drey</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="{% static 'style.css' %}">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="frame">
+	<header>
+		<h1 id="day">Drey's Todo</h1>
+		<h2 id="date"></h2>
+	</header>
+	<form>
+		<ul class="list">
+			{% for item in todo %}
+			<li>
+				<input id="item-0" type="checkbox">
+				<label for="item-0">{{item.name}}</label>
+			</li>
+			{% endfor %}
+		</ul>
+	</form>
+	
+</div>
+<!-- partial -->
+  <script  src="{% static 'main.js' %}"></script>
+
+</body>
+</html>
